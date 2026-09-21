@@ -22,12 +22,12 @@ export const roLocale: Locale = {
     dayPeriod: () => '',
   },
   match: {
-    ordinalNumberPattern: /^\d+/i,
-    era: /^(î|d)/i,
-    quarter: /^[1234]/i,
-    month: /^(0[1-9]|1[0-2])/i,
-    day: /^(0[1-9]|[12]\d|3[01])/i,
-    dayPeriod: /^(a\.m\.|p\.m\.)/i,
+    ordinalNumberPattern: /^\d+/i as any,
+    era: /^(î|d)/i as any,
+    quarter: /^[1234]/i as any,
+    month: /^(0[1-9]|1[0-2])/i as any,
+    day: /^(0[1-9]|[12]\d|3[01])/i as any,
+    dayPeriod: /^(a\.m\.|p\.m\.)/i as any,
   },
   options: {
     weekStartsOn: 1,
