@@ -29,11 +29,13 @@ export default function Home() {
 
     checkAuth()
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event: any, session: any) => {
+    const authSubscription = supabase.auth.onAuthStateChange((_event: any, session: any) => {
       setUser(session?.user || null)
     })
 
-    return () => subscription?.unsubscribe()
+    return () => {
+      authSubscription.data.subscription.unsubscribe()
+    }
   }, [])
 
   // Fetch logs
